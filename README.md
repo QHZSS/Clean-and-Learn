@@ -8,9 +8,9 @@ The development of a QA system for API documentation can greatly facilitate deve
 ## ApiQaSet
 
 ApiQaSet consists of 200 API-related questions. The proportions of the three cate-gories of questions are 41%, 40%, and 19%, respectively. We split dataset (70%/30%) into train/test dataset. Each record ofour dataset is a question-answer-solution triple:
-1.Question: the title, body and category of the question.
-2.Answer: the textual answer of the question.
-3.Solution: the start-end index of one occurrence of the an-swer
+1. Question: the title, body and category of the question.
+2. Answer: the textual answer of the question.
+3. Solution: the start-end index of one occurrence of the an-swer
 
 
 ## Getting Started
