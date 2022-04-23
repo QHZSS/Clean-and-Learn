@@ -1,5 +1,4 @@
-## Clean and Learn: Weakly-Supervised Learning for API Question Answering
-
+## Clean and Learn: Improving Robustness to Spurious Solutions in API Question Answering
 
 ## Abstract
 
