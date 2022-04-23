@@ -1,6 +1,6 @@
 ## Clean and Learn: Improving Robustness to Spurious Solutions in API Question Answering
 
-## Abstract
+## Introduction
 
 
 The development of a Question Answering (QA) system for Application Programming Interface (API) documentation can greatly facilitate developers in API-related tasks.
@@ -16,13 +16,17 @@ the top-k occurrences (learn). We evaluate our method on the constructed ApiQaSe
 dataset. The experiment results show that Clean-and-Learn achieves a ROUGE-L score
 of 75.8 and an accuracy of 70.5% in API question answering, which significantly outperforms state-of-the-art approaches.
 
+We  propose  a  novel  API  QA  method  named Clean-and-Learn, which aims to improve robustness to spurious solutions. Unlike traditional methods, Clean-and-Learnonly needs weak supervision to train the API QA model. First, it cleans the spurious candidate solutions from weakly supervised dataset though anumber of scoring functions. Hence, only high-quality (top-k) candidate solutionsare involved for training. Next, it learns a robust QA model via multi-task learningon the selected candidates.
+
+
+We evaluate the effectiveness of the proposed Clean-and-Learn on ApiQaSet, a dataset that we created with 200 API QAs on the Java documentation. We compare Clean-and-Learn with the state-of-the-art API QA methods (OpenAPIBot [4] andAPIBot [2]) and general weakly supervised learning methods (BLANC [12], Single-Hop BERT [28] and Hard-EM [5]). The results show that Clean-and-Learn obtains an accuracy of 70.5% in API question answering, which significantly outperforms existing  rule  based  and  weakly  supervised  approaches  and  achieves  comparable results to that of fully supervised models.
 
 ## ApiQaSet
 
-ApiQaSet consists of 200 API-related questions. The proportions of the three cate-gories of questions are 41%, 40%, and 19%, respectively. We split dataset (70%/30%) into train/test dataset. Each record ofour dataset is a question-answer-solution triple:
+ApiQaSet consists of 200 API-related questions. The proportions of the three categories of questions are 41%, 40%, and 19%, respectively. We split dataset (70%/30%) into train/test dataset. Each record of our dataset is a question-answer-solution triple:
 1. Question: the title, body and category of the question.
 2. Answer: the textual answer of the question.
-3. Solution: the start-end index of one occurrence of the an-swer
+3. Solution: the start-end index of one occurrence of the answer.
 
 
 ## Getting Started
